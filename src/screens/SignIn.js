@@ -48,7 +48,7 @@ const SignIn = () => {
         <ButtonFull navButton='Config' buttonTitle='Iniciar sesión' />
       </View>
       <View className='flex-1 items-center justify-end mb-4 color=gray'>
-        <Text className='text-green-500 text-xs'>
+        <Text className='text-green-500 text-md'>
           <Text className='text-gray-400'>No tienes cuenta? </Text>contactanos.
         </Text>
       </View>
