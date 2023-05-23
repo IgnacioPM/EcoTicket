@@ -21,7 +21,7 @@ const CreateTicket = () => {
   }, [])
 
   return (
-    <SafeAreaView className='flex-1 dark:bg-black'>
+    <SafeAreaView className='pb-8 flex-1 dark:bg-black'>
       <HeaderFull headerTitle={'Nueva boleta'} />
       <ScrollView className='px-6 mt-2'>
         <View className='flex-row justify-between'>
@@ -36,7 +36,7 @@ const CreateTicket = () => {
         <TextInputWLabel
           inputTitle={'Número de teléfono'}
           inputplaceholder={'8888-8888'}
-          inputKeyboardType={'name-phone-pad'}
+          inputKeyboardType={'phone-pad'}
         />
         <TextInputWLabel
           inputTitle={'Dispositivo'}

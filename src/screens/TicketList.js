@@ -1,16 +1,13 @@
 import { View, Text, SafeAreaView, ScrollView } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import GetCurrentDate from '../../helpers/GetCurrentDate'
-import OneWeekLaterDate from '../../helpers/OneWeekLaterDate'
+
 import HeaderFull from '../../components/HeaderFull'
 import Ticketcard from '../../components/Ticketcard'
 import Filter from '../../components/Filter'
 
 const TicketList = () => {
   const navigation = useNavigation()
-  const currentDate = GetCurrentDate()
-  const oneWeekLaterDate = OneWeekLaterDate()
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -19,7 +16,7 @@ const TicketList = () => {
   }, [])
 
   return (
-    <SafeAreaView className='flex-1 dark:bg-black'>
+    <SafeAreaView className='pb-8 flex-1 dark:bg-black'>
       <HeaderFull headerTitle={'Detalles'} />
       <View className='px-6 mb-2'>
         <View className='flex-row space-x-2'>

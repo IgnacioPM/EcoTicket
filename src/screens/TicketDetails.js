@@ -1,4 +1,10 @@
-import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  useColorScheme,
+} from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import HeaderFull from '../../components/HeaderFull'
 import ButtonFull from '../../components/ButtonFull'
@@ -20,25 +26,27 @@ const TicketDetails = () => {
   }, [])
 
   return (
-    <SafeAreaView className='flex-1 dark:bg-black'>
+    <SafeAreaView className='pb-8 flex-1 dark:bg-black'>
       <HeaderFull headerTitle={'Detalles'} />
       <ScrollView className='px-6'>
-        <View className='mt-2 bg-gray-900 items-center rounded-md border border-gray-700 py-2'>
-          <Text className='text-gray-300 text-3xl text-left'>
+        <View className='mt-2 dark:bg-gray-900 items-center rounded-md border border-gray-700 py-2'>
+          <Text className='dark:text-gray-300 text-3xl text-left'>
             Nombre del negocio
           </Text>
-          <Text className='text-gray-400 text-lg text-left'>
+          <Text className='dark:text-gray-400 text-lg text-left'>
             • Eslogan del negocio
           </Text>
-          <Text className='text-gray-400 text-lg text-left'>📞 8888-8888</Text>
-          <Text className='text-gray-400 text-lg text-left'>
+          <Text className='dark:text-gray-400 text-lg text-left'>
+            📞 8888-8888
+          </Text>
+          <Text className='dark:text-gray-400 text-lg text-left'>
             📧 correo@mail.com
           </Text>
-          <Text className='text-gray-400 text-lg text-left'>
+          <Text className='dark:text-gray-400 text-lg text-left'>
             📌 Dirección del negocio
           </Text>
         </View>
-        <View className='mt-2 bg-gray-900 justify-between px-2 rounded-md border border-gray-700 py-2'>
+        <View className='mt-2 dark:bg-gray-900 justify-between px-2 rounded-md border border-gray-700 py-2'>
           <View className='flex-row justify-between'>
             <DateLabel dateTitle={'Fecha recibido'} date={currentDate} />
             <DateLabel dateTitle={'Fecha estimada'} date={oneWeekLaterDate} />
@@ -54,7 +62,7 @@ const TicketDetails = () => {
           <InfoLabel infoTitle={'Precio estimado'} info={'15000'} />
           <InfoLabel infoTitle={'Abono'} info={'2000'} />
         </View>
-        <ButtonFull navButton='List' buttonTitle='Compartir' />
+        <ButtonFull navButton='Boletas' buttonTitle='Compartir' />
       </ScrollView>
     </SafeAreaView>
   )

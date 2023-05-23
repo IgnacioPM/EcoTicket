@@ -3,9 +3,6 @@ import React, { useLayoutEffect } from 'react'
 import { styled, useColorScheme } from 'nativewind'
 import { useNavigation } from '@react-navigation/native'
 
-const StyledPressable = styled(Pressable)
-const StyledText = styled(Text)
-
 const HeaderFull = ({ headerTitle }) => {
   const { colorScheme, toggleColorScheme } = useColorScheme()
   const navigation = useNavigation()
@@ -22,9 +19,9 @@ const HeaderFull = ({ headerTitle }) => {
         className='dark:bg-black p-4'
         onPress={() => navigation.goBack()}
       >
-        <Text className='text-gray-300 font-bold text-lg'>←</Text>
+        <Text className='dark:text-gray-300 font-bold text-lg'>←</Text>
       </Pressable>
-      <Text className='text-gray-300 font-bold text-3xl text-center flex-1 mt-3'>
+      <Text className='dark:text-gray-300 font-bold text-3xl text-center flex-1 mt-3'>
         {headerTitle}
       </Text>
       <Pressable onPress={toggleColorScheme} className='dark:bg-black p-4'>

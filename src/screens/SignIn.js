@@ -45,7 +45,7 @@ const SignIn = () => {
           Olvidaste la contraseña?
         </Text>
 
-        <ButtonFull navButton='Config' buttonTitle='Iniciar sesión' />
+        <ButtonFull navButton='Main' buttonTitle='Iniciar sesión' />
       </View>
       <View className='flex-1 items-center justify-end mb-4 color=gray'>
         <Text className='text-green-500 text-md'>
